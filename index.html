@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat&family=Jost:wght@300;400&family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>Питомник далматинов</title>
+</head>
+
+<body>
+    <!-- Sprite -->
+    <svg style="display: none;">
+        <symbol id="facebook" viewBox="0 0 512 512">
+            <g>
+                <path d="M288,176v-64c0-17.664,14.336-32,
+			32-32h32V0h-64c-53.024,0-96,42.976-96,
+			96v80h-64v80h64v256h96V256h64l32-80H288z" />
+            </g>
+        </symbol>
+        <symbol id="twitter" viewBox="0 0 512 512">
+            <g>
+                <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+				c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+				c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+				c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+				c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+				c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+				C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+				C480.224,136.96,497.728,118.496,512,97.248z" />
+            </g>
+        </symbol>
+        <symbol id="linkedin" viewBox="0 0 552.77 552.77">
+            <g>
+                <path d="M17.95,528.854h71.861c9.914,0,17.95-8.037,17.95-17.951V196.8c0-9.915-8.036-17.95-17.95-17.95H17.95
+					C8.035,178.85,0,186.885,0,196.8v314.103C0,520.816,8.035,528.854,17.95,528.854z" />
+                <path d="M17.95,123.629h71.861c9.914,0,17.95-8.036,17.95-17.95V41.866c0-9.914-8.036-17.95-17.95-17.95H17.95
+					C8.035,23.916,0,31.952,0,41.866v63.813C0,115.593,8.035,123.629,17.95,123.629z" />
+                <path d="M525.732,215.282c-10.098-13.292-24.988-24.223-44.676-32.791c-19.688-8.562-41.42-12.846-65.197-12.846
+					c-48.268,0-89.168,18.421-122.699,55.27c-6.672,7.332-11.523,5.729-11.523-4.186V196.8c0-9.915-8.037-17.95-17.951-17.95h-64.192
+					c-9.915,0-17.95,8.035-17.95,17.95v314.103c0,9.914,8.036,17.951,17.95,17.951h71.861c9.915,0,17.95-8.037,17.95-17.951V401.666
+					c0-45.508,2.748-76.701,8.244-93.574c5.494-16.873,15.66-30.422,30.488-40.649c14.83-10.227,31.574-15.343,50.24-15.343
+					c14.572,0,27.037,3.58,37.393,10.741c10.355,7.16,17.834,17.19,22.436,30.104c4.604,12.912,6.904,41.354,6.904,85.33v132.627
+					c0,9.914,8.035,17.951,17.949,17.951h71.861c9.914,0,17.949-8.037,17.949-17.951V333.02c0-31.445-1.982-55.607-5.941-72.48
+					S535.836,228.581,525.732,215.282z" />
+            </g>
+        </symbol>
+        <symbol id="telegram" viewBox="0 -31 512 512">
+            <g>
+                <path
+                    d="m123.195312 260.738281 63.679688 159.1875 82.902344-82.902343 142.140625 112.976562 100.082031-450-512 213.265625zm242.5-131.628906-156.714843 142.941406-19.519531 73.566407-36.058594-90.164063zm0 0" />
+            </g>
+        </symbol>
+    </svg>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <nav class="nav" id="nav">
+                    <a class="nav__link" href="#" data-scroll="#features">О нас</a>
+                    <a class="nav__link" href="#" data-scroll="#works">Наши щенки</a>
+                    <a class="nav__link" href="#" data-scroll="#team">Выпускники</a>
+                </nav>
+
+                <button class="burger" type="button" id="navToggle">
+                    <span class="burger__item">Menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Intro -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro__inner">
+                <div class="intro__content">
+                    <div class="intro__prompt intro__prompt--content">работает с 2009г</div>
+                    <img class="intro__promt-arrow1" src="images/intro/Vector1.png" alt="Стрелка подсказки">
+                    <h1 class="intro__title">Питомник далматинов</h1>
+                    <h2 class="intro__subtitle">Black<span style="color: #7ED3EE">&</span>White</h2>
+                    <div class="intro__text">
+                        Все наши щенки имеют вет.паспорт,<br>
+                        прививки по возрасту, родословную
+                    </div>
+                    <a href="#" class="btn btn--yellow">Консультация</a>
+                </div>
+                <div class="intro__pictures">
+                    <img class="intro__photo intro__photo--gerda" src="images/intro/dog2.png" alt="Герда">
+                    <img class="intro__photo intro__photo--max" src="images/intro/dog1.png" alt="Макс">
+                    <img class="intro__photo intro__photo--graph" src="images/intro/dog3.png" alt="Граф">
+                    <a href="#" class="btn__video">
+                        <img src="images/intro/video_btn.png" alt="play video presentation">
+                    </a>
+                    <div class="intro__prompt intro__prompt--pictures">видеопрезентация</div>
+                    <img class="intro__promt-arrow2" src="images/intro/Vector2.png" alt="Стрелка подсказки">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about">
+        <div class="container">
+            <div class="about__inner">
+                <div class="about__content">
+                    <h2 class="section__title section__title--about">О питомнике</h2>
+                    <div class="about__text">
+                        Мы - профессиональный питомник. Делаем счастливыми людей уже целых 13 лет.
+                        Наши производители имеют богатую родослновную, имеют множество титулов. Также все родители
+                        проходят ОКД и тесты на психику.
+                        Все щенки соответствуют принятому международному стандарту породу по внешнему виду и по психике.
+                    </div>
+                </div>
+                <div class="about__picture">
+                    <img src="images/about/pic1.png" alt="Щенки">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Graduates -->
+    <section class="graduates">
+        <div class="container">
+            <div class="graduates__inner">
+                <h2 class="section__title">Наши выпускники</h2>
+                <div class="graduates__item">
+                    <img src="images/graduates/graduates1.png" alt="Герда" class="graduates__photo">
+                    <div class="graduates__content">
+                        <div class="graduates__title">Герда, 1 год и 2 месяца.</div>
+                        <div class="graduates__text">
+                            Это наша первая собака. Взяли в питомнике Black&White и не пожалели! Удивительная девочка,
+                            понимает все с полуслова)
+                            Спасибо Вам!
+                        </div>
+                    </div>
+                </div>
+                <div class="graduates__item">
+                    <img src="images/graduates/graduates2.png" alt="Макс" class="graduates__photo">
+                    <div class="graduates__content">
+                        <div class="graduates__title">Макс, 7 месяцев.</div>
+                        <div class="graduates__text">
+                            Это наша первая собака. Взяли в питомнике Black&White и не пожалели! Удивительная девочка,
+                            понимает все с полуслова)
+                            Спасибо Вам!
+                        </div>
+                    </div>
+                </div>
+                <div class="graduates__item">
+                    <img src="images/graduates/graduates3.png" alt="Граф" class="graduates__photo">
+                    <div class="graduates__content">
+                        <div class="graduates__title">Граф, 9 месяцев.</div>
+                        <div class="graduates__text">
+                            Это наша первая собака. Взяли в питомнике Black&White и не пожалели! Удивительная девочка,
+                            понимает все с полуслова)
+                            Спасибо Вам!
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn">Смотреть больше</a>
+            </div>
+        </div>
+    </section><!-- /.graduates -->
+
+    <!-- Dogs -->
+    <section class="dogs">
+        <div class="container">
+            <div class="dogs__inner">
+                <h2 class="section__title">Свободные щенки</h2>
+                <div class="dogs__item">
+                    <div class="dogs__content">
+                        <a href="#" class="dogs__link">МАЛЬЧИКИ от пары Zeus von Grau</a>
+                        <div class="dogs__birth">Дата рождения: 09/10/2022.</div>
+                        <div class="dogs__info dogs__info--odd">СВОБОДНО ДВА ЩЕНКА</div>
+                    </div>
+                    <img src="images/dogs/dogs1.png" alt="Щенки" class="dogs__photo">
+                    <a href="#" class="btn btn--yellow">Посмотреть всех</a>
+                </div>
+                <div class="dogs__item">
+                    <div class="dogs__content">
+                        <a href="#" class="dogs__link">МАЛЬЧИКИ от пары Zeus von Grau</a>
+                        <div class="dogs__birth">Дата рождения: 20/09/2022.</div>
+                        <div class="dogs__info dogs__info--even">СВОБОДНО три ЩЕНКА</div>
+                    </div>
+                    <img src="images/dogs/dogs2.png" alt="Щенки" class="dogs__photo">
+                    <a href="#" class="btn btn--yellow">Посмотреть всех</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section class="section">
+        <div class="container">
+            <form action="/" class="form" method="POST">
+                <h2 class="section__title">Бесплатная консультация</h2>
+                <div class="form__inner">
+                    <div class="form__group">
+                        <input type="text" class="form__control" placeholder="ФИО">
+                    </div>
+                    <div class="form__group">
+                        <input type="text" class="form__control" placeholder="Какой помет вас заинтересовал?">
+                    </div>
+                    <div class="form__group">
+                        <input type="text" class="form__control" placeholder="Номер телефона">
+                    </div>
+                    <div class="form__group">
+                        <input type="email" class="form__control" placeholder="Адрес электронной почты">
+                    </div>
+                    <button class="btn btn--yellow" type="submit">Отправить заявку</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+	<footer class="footer">
+		<div class="social social--footer">
+			<a class="social__item social__item--footer social__item--facebook" href="#" target="_blank">
+				<svg class="social__icon social__icon--footer">
+					<use xlink:href="#facebook"></use>
+				</svg>
+			</a>
+			<a class="social__item social__item--footer social__item--twitter" href="#" target="_blank">
+				<svg class="social__icon social__icon--footer">
+					<use xlink:href="#twitter"></use>
+				</svg>
+			</a>
+			<a class="social__item social__item--footer social__item--linkedin" href="#" target="_blank">
+				<svg class="social__icon social__icon--footer">
+					<use xlink:href="#linkedin"></use>
+				</svg>
+			</a>
+			<a class="social__item social__item--footer social__item--telegram" href="#" target="_blank">
+				<svg class="social__icon social__icon--footer">
+					<use xlink:href="#telegram"></use>
+				</svg>
+			</a>
+		</div>	
+	</footer>
+
+</body>
+
+</html>
