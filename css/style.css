@@ -9,31 +9,41 @@ body {
 *,
 *:before,
 *:after {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-h1, h2, h3, h4 , h5, h6 {
-	margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
 }
 
 /* Container
 ================*/
 .container {
-	width: 100%;
-	max-width: 1400px;
-	margin: 0 auto;
-	padding: 0 15px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 /* Header
 ================*/
 .header {
-	width: 100%;
-	height: 100px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1000;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, .97);
+}
+
+.header.fixed {
+    height: auto;
+    position: fixed;
 }
 
 .header__inner {
@@ -58,7 +68,7 @@ h1, h2, h3, h4 , h5, h6 {
     transition: transform .2s linear;
 }
 
-.nav__link + .nav__link {
+.nav__link+.nav__link {
     margin-left: 110px;
 }
 
@@ -69,7 +79,7 @@ h1, h2, h3, h4 , h5, h6 {
 /* Intro
 ================*/
 .intro {
-    padding: 315px 0 300px;
+    padding: 315px 0 180px;
     background-image: url(../images/intro/intro_bg.png);
     background-repeat: no-repeat;
 }
@@ -94,13 +104,14 @@ h1, h2, h3, h4 , h5, h6 {
 }
 
 .intro__prompt--content {
-    top: -10%;
+    top: -8%;
     left: 47%;
+    white-space: nowrap;
 }
 
 .intro__prompt--pictures {
-    top: 145%;
-    left: -58%;
+    top: 109%;
+    left: -65%;
 }
 
 .intro__promt-arrow1 {
@@ -111,14 +122,14 @@ h1, h2, h3, h4 , h5, h6 {
 
 .intro__promt-arrow2 {
     position: absolute;
-    top: 129%;
-    left: -24%;
+    top: 100%;
+    left: -30%;
 }
 
 .intro__title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 58px;
+    font-size: 55px;
     white-space: nowrap;
 }
 
@@ -140,43 +151,25 @@ h1, h2, h3, h4 , h5, h6 {
     width: 50%;
 }
 
-.intro__photo--max {
-    position: absolute;
-    top: -65px;
-    right: 0;
-}
-
-.intro__photo--graph {
-    position: absolute;
-    bottom: -120px;
-    right: -18px;
-}
-
-.intro__photo--gerda {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 /* Button
 ================*/
 .btn {
-	padding: 29px 47px;
-	display: inline-block;
-	vertical-align: top;
-	
-	border-radius: 100px;
-	
-	font-family: inherit;
-	font-size: 29px;
-	font-weight: 400;
+    padding: 29px 47px;
+    display: inline-block;
+    vertical-align: top;
+
+    border-radius: 100px;
+
+    font-family: inherit;
+    font-size: 29px;
+    font-weight: 400;
     line-height: 14px;
-	color: #000;
-	text-decoration: none;
-	text-align: center;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
     border: 4px solid #FFE660;
-	
-	transition: background-color .2s linear;
+
+    transition: background-color .2s linear;
 }
 
 .btn:hover {
@@ -185,10 +178,10 @@ h1, h2, h3, h4 , h5, h6 {
 
 .btn__video {
     position: absolute;
-    top: 100%;
-    left: 0;
-	display: inline-block;
-	text-decoration: none;
+    bottom: -5%;
+    left: -6%;
+    display: inline-block;
+    text-decoration: none;
 }
 
 .btn--yellow {
@@ -224,7 +217,13 @@ h1, h2, h3, h4 , h5, h6 {
 }
 
 .section__title--about {
-    margin-bottom: 90px;
+    margin-bottom: 80px;
+}
+
+.section__photo {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* About
@@ -239,12 +238,17 @@ h1, h2, h3, h4 , h5, h6 {
 }
 
 .about__content {
-    padding-top: 180px;
+    padding-top: 135px;
+    width: 50%;
 }
 
 .about__text {
     font-weight: 300;
     font-size: 32px;
+}
+
+.about__picture {
+    width: 50%;
 }
 
 /* Graduates
@@ -269,12 +273,17 @@ h1, h2, h3, h4 , h5, h6 {
     align-items: center;
 }
 
+.graduates__photo {
+    width: 50%;
+}
+
 .graduates__item:last-of-type {
     padding-bottom: 150px;
 }
 
 .graduates__content {
     margin-left: 50px;
+    width: 50%;
 }
 
 .graduates__title {
@@ -289,7 +298,7 @@ h1, h2, h3, h4 , h5, h6 {
     font-size: 28px;
 }
 
-.graduates__item + .graduates__item {
+.graduates__item+.graduates__item {
     padding-top: 120px;
 }
 
@@ -301,8 +310,8 @@ h1, h2, h3, h4 , h5, h6 {
 
 .dogs__inner {
     background-image:
-    url('../images/dogs/bone1.png'),
-    url('../images/dogs/bone2.png');
+        url('../images/dogs/bone1.png'),
+        url('../images/dogs/bone2.png');
     background-repeat: no-repeat;
     background-position: 96% 15%, -10% 99%;
 }
@@ -316,7 +325,7 @@ h1, h2, h3, h4 , h5, h6 {
     align-items: center;
 }
 
-.dogs__item + .dogs__item {
+.dogs__item+.dogs__item {
     margin-top: 150px;
 }
 
@@ -352,8 +361,8 @@ h1, h2, h3, h4 , h5, h6 {
 .form {
     margin-bottom: 190px;
     background-image:
-    url('../images/form/form.png'),
-    url('../images/form/form.png');
+        url('../images/form/form.png'),
+        url('../images/form/form.png');
     background-repeat: no-repeat;
     background-position: 109% 100%, -34% 18%;
 }
@@ -369,7 +378,7 @@ h1, h2, h3, h4 , h5, h6 {
 .form__inner {
     width: 100%;
     max-width: 1060px;
-    padding:110px 110px 45px 180px;
+    padding: 110px 110px 45px 180px;
     border: 1px solid #000;
     border-radius: 17px;
 }
@@ -389,7 +398,7 @@ h1, h2, h3, h4 , h5, h6 {
     padding: 15px 30px;
     border: 3px solid #7ED3EE;
     border-radius: 50%;
-    
+
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
     font-weight: 600;
@@ -400,12 +409,15 @@ h1, h2, h3, h4 , h5, h6 {
     padding: 15px 35px;
     content: "1";
 }
+
 .form__group:nth-child(2)::before {
     content: "2";
 }
+
 .form__group:nth-child(3)::before {
     content: "3";
 }
+
 .form__group:nth-child(4)::before {
     content: "4";
 }
@@ -449,76 +461,71 @@ h1, h2, h3, h4 , h5, h6 {
 /* Social
 =====================*/
 .social {
-	margin-bottom: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .social--footer {
-	margin: 0;
-	padding: 40px 0;
+    margin: 0;
+    padding: 40px 0;
 }
 
 .social__item {
-	margin-right: 18px;
-	display: flex;
-	align-items: center;
-	width: 30px;
-	height: 30px;
-	border: 0 solid #fff;
-	border-radius: 50%;
-	background-color: #a1859e;
-	transition: background-color .2s linear;
+    margin-right: 18px;
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 0 solid #fff;
+    border-radius: 50%;
+    background-color: #a1859e;
+    transition: background-color .2s linear;
 }
 
 .social__item:last-child {
-	margin-right: 0;
+    margin-right: 0;
 }
 
 .social__item--footer {
-	width: 60px;
-	height: 60px;
-	padding: 10px;
-	background-color: #7ED3EE;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    background-color: #7ED3EE;
 }
 
 .social__item--facebook:hover {
-	background-color: #4f689e;
+    background-color: #4f689e;
 }
 
 .social__item--twitter:hover {
-	background-color: #1DA1F2;
+    background-color: #1DA1F2;
 }
 
 .social__item--linkedin:hover {
-	background-color: #0077B5;
+    background-color: #0077B5;
 }
 
 .social__item--telegram:hover {
-	background-color: #3e61af;
+    background-color: #3e61af;
 }
 
 .social__icon {
-	display: block;
-	height: 16px;
-	fill: #fff;
+    display: block;
+    height: 16px;
+    fill: #fff;
 }
 
 .social__icon--footer {
-	height: 33px;
+    height: 33px;
 }
 
 /* Footer
 =====================*/
 .footer {
-	background-color: #282828;
+    background-color: #282828;
 }
-
-
-
-
-
 
 /* Burger
 ================*/
@@ -528,6 +535,11 @@ h1, h2, h3, h4 , h5, h6 {
 	background: none;
 	border: 0;
 	cursor: pointer;
+	position: relative;
+}
+
+.burger:focus {
+	outline: none;
 }
 
 .burger__item {
@@ -535,31 +547,468 @@ h1, h2, h3, h4 , h5, h6 {
 	width: 30px;
 	height: 3px;
 	
-	background-color: #fff;
+	background-color: #000;
 	
 	font-size: 0;
 	color: transparent;
-	position: relative;
-	
 }
 
-.burger__item:before,
-.burger__item:after{
+.burger.clicked span {
+	opacity: 0;
+}
+
+.burger.clicked::before {
+	transform: rotate(-45deg);
+}
+
+.burger.clicked::after {
+	transform: rotate(45deg);
+}
+
+.burger.clicked::before,
+.burger.clicked::after {
+	top: 50%;
+}
+
+.burger::before,
+.burger::after{
 	content: "";
 	width: 100%;
-	height: 100%;
+	height: 3px;
 	
-	background-color: #fff;
+	background-color: #000;
 	
 	position: absolute;
 	left: 0;
 	z-index: 1;
+	transition: all .2s ease;
 }
 
-.burger__item:before {
-	top: -8px;
+.burger::before {
+	top: 8px;
 }
 
-.burger__item:after {
-	bottom: -8px;
+.burger::after {
+	bottom: 8px;
+}
+
+/* Media
+================*/
+@media (max-width: 1300px) {
+
+    /* Intro */
+    .intro__title {
+        white-space: initial;
+        font-size: 50px;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    /* Nav */
+    .nav {
+        font-size: 25px;
+    }
+
+    .nav__link+.nav__link {
+        margin-left: 70px;
+    }
+
+    /* Intro */
+    .intro {
+        padding: 250px 0;
+    }
+
+    .intro__title {
+        font-size: 40px;
+    }
+
+    .intro__subtitle {
+        font-size: 35px;
+    }
+
+    .intro__content {
+        width: 60%;
+    }
+
+    .intro__prompt--content {
+        top: -11%;
+    }
+
+    .intro__promt-arrow2 {
+        width: 120px;
+    }
+
+    .intro__text {
+        margin: 35px 0;
+    }
+
+    .intro__pictures {
+        width: 40%;
+    }
+
+    .intro__prompt--pictures {
+        top: 112%;
+    }
+
+    /* Btn */
+    .btn__video {
+        left: 15%;
+        bottom: -14%;
+    }
+
+    .btn__video img {
+        width: 130px;
+    }
+
+    .btn {
+        padding: 20px 38px;
+        font-size: 20px;
+    }
+
+    /* About */
+    .about {
+        padding: 30px 0 80px;
+    }
+
+    .about__content {
+        padding-top: 0;
+    }
+
+    .about__text {
+        font-size: 25px;
+        line-height: 1.3;
+    }
+
+    /* Section */
+    .section__title {
+        font-size: 37px;
+        margin-bottom: 100px;
+    }
+
+    .section__title--about {
+        margin-bottom: 50px;
+    }
+
+    /* Graduates */
+    .graduates {
+        padding-bottom: 80px;
+    }
+
+    .graduates__item+.graduates__item {
+        padding-top: 50px;
+    }
+
+    .graduates__item:last-of-type {
+        padding-bottom: 65px;
+    }
+
+    .graduates__content {
+        margin-left: 30px;
+    }
+
+    .graduates__title {
+        margin-bottom: 15px;
+        font-size: 32px;
+    }
+
+    .graduates__text {
+        font-size: 25px;
+    }
+
+    .graduates__photo {
+        width: 40%;
+    }
+
+    .graduates__content {
+        width: 60%;
+    }
+
+    /* Dogs */
+    .dogs {
+        margin-bottom: 100px;
+    }
+
+    .dogs__item+.dogs__item {
+        margin-top: 80px;
+    }
+
+    .dogs__link {
+        margin-bottom: 0;
+        font-size: 30px;
+    }
+
+    .dogs__info {
+        font-size: 30px;
+    }
+
+    /* Form */
+    .form {
+        margin-bottom: 100px;
+    }
+
+    .form__group::before {
+        font-size: 36px;
+    }
+
+    .form__control {
+        margin-bottom: 75px;
+        font-size: 25px;
+    }
+
+    .form__control::placeholder {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* Header */
+
+    .header__inner {
+        padding: 15px 0;
+        justify-content: end;
+    }
+
+    /* Nav */
+    .nav {
+        padding: 20px 20px 40px;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+
+        background-color: rgba(255, 255, 255, .97);
+        text-align: right;
+
+        position: absolute;
+        top: 100%;
+        right: 0;
+
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    /* Burger */
+    .burger {
+        display: block;
+    }
+
+    /* Intro */
+    .intro {
+        padding: 205px 0 60px;
+    }
+
+    .intro__inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro__content,
+    .intro__pictures {
+        width: 100%;
+    }
+
+    .intro__pictures {
+        order: 1;
+    }
+
+    .intro__content {
+        padding-top: 50px;
+        order: 2;
+    }
+
+    .intro__title {
+        font-size: 35px;
+    }
+
+    .intro__subtitle {
+        font-size: 28px;
+    }
+
+    .intro__text {
+        margin: 25px 0;
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    .intro__prompt,
+    .intro__promt-arrow1,
+    .intro__promt-arrow2 {
+        display: none;
+    }
+
+    /* About */
+    .about {
+        padding: 30px 0 50px;
+    }
+
+    .about__inner {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about__content {
+        text-align: center;
+    }
+
+    .about__text {
+        text-align: left;
+    }
+
+    .about__content,
+    .about__picture {
+        width: 100%;
+    }
+
+    /* Graduates */
+    .graduates__item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .graduates__photo {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .graduates__content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .graduates__title {
+        margin-bottom: 10px;
+        font-size: 26px;
+    }
+
+    .graduates__text {
+        text-align: left;
+        font-size: 18px;
+    }
+
+    /* Dogs */
+    .dogs {
+        margin-bottom: 75px;
+    }
+
+    .dogs__item+.dogs__item {
+        margin-top: 45px;
+    }
+
+    .dogs__link,
+    .dogs__info {
+        font-size: 25px;
+    }
+
+    .dogs__birth {
+        font-size: 20px;
+    }
+
+    .dogs__photo {
+        margin: 20px 0;
+    }
+
+    /* Form */
+    .form__inner {
+        padding: 65px 50px 45px 50px;
+    }
+
+    .form__group::before {
+        display: none;
+    }
+
+    .form__control {
+        padding: 8px 0;
+        margin-bottom: 35px;
+        font-size: 22px;
+    }
+
+    .form__control::placeholder {
+        font-size: 22px;
+    }
+
+    /* Btn */
+    .btn__video {
+        left: 30%;
+        bottom: initial;
+        top: 80%;
+    }
+
+    .btn__video img {
+        width: 100px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 18px;
+    }
+
+    /* Section */
+    .section__title {
+        margin-bottom: 65px;
+        font-size: 27px;
+    }
+
+    /* Social */
+
+    .social__icon--footer {
+        height: 20px;
+    }
+
+    .social__item--footer {
+        width: 40px;
+        height: 40px;
+        background-color: #7ED3EE;
+    }
+
+    .social--footer {
+        padding: 25px 0;
+    }
+}
+
+@media (max-width: 414px) {
+
+    /* Section */
+    .section__title {
+        margin-bottom: 45px;
+        font-size: 21px;
+    }
+
+    /* Dogs */
+    .dogs__link,
+    .dogs__info {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    /* Form */
+    .form__inner {
+        padding: 40px 15px;
+    }
+
+    .form__control {
+        padding: 8px 0;
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+
+    .form__control::placeholder {
+        font-size: 18px;
+    }
+
+    /* Graduates */
+
+    .graduates__item:last-of-type {
+        padding-bottom: 25px;
+    }
+
+    /* Btn */
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
 }

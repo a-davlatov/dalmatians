@@ -61,16 +61,16 @@
     </svg>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header__inner">
                 <nav class="nav" id="nav">
-                    <a class="nav__link" href="#" data-scroll="#features">О нас</a>
-                    <a class="nav__link" href="#" data-scroll="#works">Наши щенки</a>
-                    <a class="nav__link" href="#" data-scroll="#team">Выпускники</a>
+                    <a class="nav__link" href="#" data-scroll="about">О нас</a>
+                    <a class="nav__link" href="#" data-scroll="graduates">Выпускники</a>
+                    <a class="nav__link" href="#" data-scroll="dogs">Наши щенки</a>
                 </nav>
 
-                <button class="burger" type="button" id="navToggle">
+                <button class="burger" type="button" id="burger">
                     <span class="burger__item">Menu</span>
                 </button>
             </div>
@@ -78,7 +78,7 @@
     </header>
 
     <!-- Intro -->
-    <section class="intro">
+    <section class="intro" id="intro">
         <div class="container">
             <div class="intro__inner">
                 <div class="intro__content">
@@ -93,9 +93,7 @@
                     <a href="#" class="btn btn--yellow">Консультация</a>
                 </div>
                 <div class="intro__pictures">
-                    <img class="intro__photo intro__photo--gerda" src="images/intro/dog2.png" alt="Герда">
-                    <img class="intro__photo intro__photo--max" src="images/intro/dog1.png" alt="Макс">
-                    <img class="intro__photo intro__photo--graph" src="images/intro/dog3.png" alt="Граф">
+                    <img class="intro__photo section__photo" src="images/intro/dogs.png" alt="Щенки">
                     <a href="#" class="btn__video">
                         <img src="images/intro/video_btn.png" alt="play video presentation">
                     </a>
@@ -107,7 +105,7 @@
     </section>
 
     <!-- About -->
-    <section class="section about">
+    <section class="section about" id="about">
         <div class="container">
             <div class="about__inner">
                 <div class="about__content">
@@ -120,19 +118,19 @@
                     </div>
                 </div>
                 <div class="about__picture">
-                    <img src="images/about/pic1.png" alt="Щенки">
+                    <img class="section__photo" src="images/about/pic1.png" alt="Щенки">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Graduates -->
-    <section class="graduates">
+    <section class="graduates" id="graduates">
         <div class="container">
             <div class="graduates__inner">
                 <h2 class="section__title">Наши выпускники</h2>
                 <div class="graduates__item">
-                    <img src="images/graduates/graduates1.png" alt="Герда" class="graduates__photo">
+                    <img src="images/graduates/graduates1.png" alt="Герда" class="graduates__photo section__photo">
                     <div class="graduates__content">
                         <div class="graduates__title">Герда, 1 год и 2 месяца.</div>
                         <div class="graduates__text">
@@ -143,7 +141,7 @@
                     </div>
                 </div>
                 <div class="graduates__item">
-                    <img src="images/graduates/graduates2.png" alt="Макс" class="graduates__photo">
+                    <img src="images/graduates/graduates2.png" alt="Макс" class="graduates__photo section__photo">
                     <div class="graduates__content">
                         <div class="graduates__title">Макс, 7 месяцев.</div>
                         <div class="graduates__text">
@@ -154,7 +152,7 @@
                     </div>
                 </div>
                 <div class="graduates__item">
-                    <img src="images/graduates/graduates3.png" alt="Граф" class="graduates__photo">
+                    <img src="images/graduates/graduates3.png" alt="Граф" class="graduates__photo section__photo">
                     <div class="graduates__content">
                         <div class="graduates__title">Граф, 9 месяцев.</div>
                         <div class="graduates__text">
@@ -170,7 +168,7 @@
     </section><!-- /.graduates -->
 
     <!-- Dogs -->
-    <section class="dogs">
+    <section class="dogs" id="dogs">
         <div class="container">
             <div class="dogs__inner">
                 <h2 class="section__title">Свободные щенки</h2>
@@ -180,7 +178,7 @@
                         <div class="dogs__birth">Дата рождения: 09/10/2022.</div>
                         <div class="dogs__info dogs__info--odd">СВОБОДНО ДВА ЩЕНКА</div>
                     </div>
-                    <img src="images/dogs/dogs1.png" alt="Щенки" class="dogs__photo">
+                    <img src="images/dogs/dogs1.png" alt="Щенки" class="dogs__photo section__photo">
                     <a href="#" class="btn btn--yellow">Посмотреть всех</a>
                 </div>
                 <div class="dogs__item">
@@ -189,7 +187,7 @@
                         <div class="dogs__birth">Дата рождения: 20/09/2022.</div>
                         <div class="dogs__info dogs__info--even">СВОБОДНО три ЩЕНКА</div>
                     </div>
-                    <img src="images/dogs/dogs2.png" alt="Щенки" class="dogs__photo">
+                    <img src="images/dogs/dogs2.png" alt="Щенки" class="dogs__photo section__photo">
                     <a href="#" class="btn btn--yellow">Посмотреть всех</a>
                 </div>
             </div>
