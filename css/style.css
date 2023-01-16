@@ -178,6 +178,7 @@ h6 {
 
 .btn:hover {
     background: #FFE660;
+    cursor: pointer;
 }
 
 .btn__video {
@@ -601,6 +602,25 @@ h6 {
 	bottom: 8px;
 }
 
+/* Change-lang
+================*/
+
+.change-lang {
+    position: absolute;
+    top: 45%;
+    right: 40px;
+    z-index: inherit;
+    height: 22px;
+}
+
+.change-lang:hover {
+    cursor: pointer;
+}
+
+.change-lang:focus {
+	outline: none;
+}
+
 /* Media
 ================*/
 @media (max-width: 1300px) {
@@ -774,6 +794,9 @@ h6 {
 @media (max-width: 767px) {
 
     /* Header */
+    .header.fixed .nav {
+        background-color: rgba(255, 255, 255, .97);
+    }
 
     .header__inner {
         padding: 15px 0;
@@ -782,12 +805,12 @@ h6 {
 
     /* Nav */
     .nav {
-        padding: 20px 20px 40px;
+        padding: 0 20px 40px;
         display: none;
         flex-direction: column;
+        align-items: end;
         width: 100%;
 
-        background-color: rgba(255, 255, 255, .97);
         text-align: right;
 
         position: absolute;
@@ -798,6 +821,12 @@ h6 {
 
     .nav.show {
         display: flex;
+    }
+
+    .change-lang {
+        margin-top: 10px;
+        position: static;
+        width: 45px;
     }
 
     /* Burger */
