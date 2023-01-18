@@ -82,7 +82,7 @@ function changeLanguage() {
         return
     }
 
-    const url = '../lang.json'
+    const url = 'lang.json'
     fetch(url)
         .then(response => response.json())
         .then((lang) => {
