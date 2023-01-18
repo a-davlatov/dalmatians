@@ -89,7 +89,8 @@ function changeLanguage() {
 
             const langArr = lang
             selectEl.value = hash
-            document.querySelector('title').innerText = langArr['unit'][hash]
+            document.querySelector('title').innerText = langArr['unit'][hash]            
+            document.querySelector('html').lang = hash            
 
             for (let key in langArr) {
                 const elem = document.querySelectorAll('.lng-' + key)
