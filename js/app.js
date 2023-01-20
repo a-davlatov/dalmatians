@@ -89,8 +89,8 @@ function changeLanguage() {
 
             const langArr = lang
             selectEl.value = hash
-            document.querySelector('title').innerText = langArr['unit'][hash]            
-            document.querySelector('html').lang = hash            
+            document.querySelector('title').innerText = langArr['unit'][hash]
+            document.querySelector('html').lang = hash
 
             for (let key in langArr) {
                 const elem = document.querySelectorAll('.lng-' + key)
@@ -107,3 +107,10 @@ function changeLanguage() {
 }
 
 changeLanguage()
+
+// Load .loadLater content after page load
+const loadLater = document.querySelector('.loadLater')
+const head = document.querySelector('head')
+if (loadLater && head) {
+    head.insertAdjacentHTML('beforeend', loadLater.innerHTML)
+}
