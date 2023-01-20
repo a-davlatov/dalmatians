@@ -104,8 +104,6 @@ function changeLanguage() {
                 }
             }
         })
-
-
 }
 
 changeLanguage()
