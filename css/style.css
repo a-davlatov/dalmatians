@@ -84,7 +84,7 @@ h6 {
 ================*/
 .intro {
     padding: 315px 0 180px;
-    background-image: url(../images/intro/intro_bg.png);
+    background-image: url('../images/intro/intro_bg.webp');
     background-repeat: no-repeat;
 }
 
@@ -265,7 +265,7 @@ h6 {
 ================*/
 .graduates {
     padding-bottom: 150px;
-    background-image: url(../images/graduates/bg.png);
+    background-image: url('../images/graduates/bg.webp');
     background-repeat: no-repeat;
     background-position: top right;
 }
@@ -320,8 +320,8 @@ h6 {
 
 .dogs__inner {
     background-image:
-        url('../images/dogs/bone1.png'),
-        url('../images/dogs/bone2.png');
+        url('../images/dogs/bone1.webp'),
+        url('../images/dogs/bone2.webp');
     background-repeat: no-repeat;
     background-position: 96% 15%, -10% 99%;
 }
@@ -371,8 +371,8 @@ h6 {
 .form {
     margin-bottom: 190px;
     background-image:
-        url('../images/form/form.png'),
-        url('../images/form/form.png');
+        url('../images/form/form.webp'),
+        url('../images/form/form.webp');
     background-repeat: no-repeat;
     background-position: 109% 100%, -34% 18%;
 }
@@ -689,6 +689,7 @@ h6 {
 
     .btn__video img {
         width: 130px;
+        height: auto;
     }
 
     .btn {
