@@ -106,7 +106,11 @@ function changeLanguage() {
         })
 }
 
-document.querySelector('.loader').style.display = 'none'
+window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        document.querySelector('.preloader').style.display = 'none'
+    }, 500)
+})
 
 changeLanguage()
 
