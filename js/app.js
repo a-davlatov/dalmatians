@@ -106,9 +106,11 @@ function changeLanguage() {
         })
 }
 
+document.querySelector('.loader').style.display = 'none'
+
 changeLanguage()
 
-// Load .loadLater content after page load
+// Load fonts after page load
 const loadLater = document.querySelector('.loadLater')
 const head = document.querySelector('head')
 if (loadLater && head) {

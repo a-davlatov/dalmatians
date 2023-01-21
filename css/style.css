@@ -366,6 +366,50 @@ h6 {
     margin: 30px 0;
 }
 
+/* Loader
+================*/
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring::after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #cef;
+    border-color: #cef transparent #cef transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* Form
 ================*/
 .form {
@@ -540,66 +584,66 @@ h6 {
 /* Burger
 ================*/
 .burger {
-	padding: 15px 0;
-	display: none;
-	background: none;
-	border: 0;
-	cursor: pointer;
-	position: relative;
+    padding: 15px 0;
+    display: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    position: relative;
 }
 
 .burger:focus {
-	outline: none;
+    outline: none;
 }
 
 .burger__item {
-	display: block;
-	width: 30px;
-	height: 3px;
-	
-	background-color: #000;
-	
-	font-size: 0;
-	color: transparent;
+    display: block;
+    width: 30px;
+    height: 3px;
+
+    background-color: #000;
+
+    font-size: 0;
+    color: transparent;
 }
 
 .burger.clicked span {
-	opacity: 0;
+    opacity: 0;
 }
 
 .burger.clicked::before {
-	transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 .burger.clicked::after {
-	transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .burger.clicked::before,
 .burger.clicked::after {
-	top: 50%;
+    top: 50%;
 }
 
 .burger::before,
-.burger::after{
-	content: "";
-	width: 100%;
-	height: 3px;
-	
-	background-color: #000;
-	
-	position: absolute;
-	left: 0;
-	z-index: 1;
-	transition: all .2s ease;
+.burger::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+
+    background-color: #000;
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transition: all .2s ease;
 }
 
 .burger::before {
-	top: 8px;
+    top: 8px;
 }
 
 .burger::after {
-	bottom: 8px;
+    bottom: 8px;
 }
 
 /* Change-lang
@@ -618,7 +662,7 @@ h6 {
 }
 
 .change-lang:focus {
-	outline: none;
+    outline: none;
 }
 
 /* Media
