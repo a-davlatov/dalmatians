@@ -109,7 +109,7 @@ function changeLanguage() {
 window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.querySelector('.preloader').style.display = 'none'
-    }, 500)
+    }, 1000)
 })
 
 changeLanguage()
