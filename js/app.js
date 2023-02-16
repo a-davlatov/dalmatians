@@ -121,27 +121,27 @@ if (loadLater && head) {
     head.insertAdjacentHTML('beforeend', loadLater.innerHTML)
 }
 
-var element = document.getElementById('phone')
-var maskOptions = {
-    mask: '+{7}(000)000-00-00'
-};
-var mask = IMask(element, maskOptions)
+// Validate forms
+const element = document.getElementById('phone')
+const maskOptions = { mask: '+{7}(000)000-00-00' }
+const mask = IMask(element, maskOptions)
 
-const validator = new JustValidate('#form')
+const validator = new JustValidate('#form', {
+    validateBeforeSubmitting: true,
+})
 
-validator
-    .addField('#name', [
-        {
-            rule: 'required',
-        },
-        {
-            rule: 'minLength',
-            value: 3,
-        },
-        {
-            rule: 'maxLength',
-            value: 15,
-        },
+validator.addField('#name', [
+    {
+        rule: 'required',
+    },
+    {
+        rule: 'minLength',
+        value: 3,
+    },
+    {
+        rule: 'maxLength',
+        value: 15,
+    },
     ])
     .addField('#email', [
         {
@@ -166,21 +166,21 @@ validator
         },
     ])
 
+// Form submit
+
 const formEl = document.querySelector('#form')
 formEl.addEventListener('submit', async (evt) => {
     evt.preventDefault()
 
-    let response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+    await fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
         body: new FormData(form),
     })
-        .catch((err) => {
-            throw err;
-        })
-
-    if (response.ok) {
-        console.log('submitted')
-    }
-
-    form.reset()
+    .then((data) => {
+        console.log(data, 'Данные успешно отправлены!')
+        form.reset()
+    })
+    .catch((err) => {
+        throw err
+    })
 })
