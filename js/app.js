@@ -120,3 +120,67 @@ const head = document.querySelector('head')
 if (loadLater && head) {
     head.insertAdjacentHTML('beforeend', loadLater.innerHTML)
 }
+
+var element = document.getElementById('phone')
+var maskOptions = {
+    mask: '+{7}(000)000-00-00'
+};
+var mask = IMask(element, maskOptions)
+
+const validator = new JustValidate('#form')
+
+validator
+    .addField('#name', [
+        {
+            rule: 'required',
+        },
+        {
+            rule: 'minLength',
+            value: 3,
+        },
+        {
+            rule: 'maxLength',
+            value: 15,
+        },
+    ])
+    .addField('#email', [
+        {
+            rule: 'required',
+        },
+        {
+            rule: 'email',
+        },
+    ])
+    .addField('#subject', [
+        {
+            rule: 'required',
+        },
+        {
+            rule: 'minLength',
+            value: 6,
+        },
+    ])
+    .addField('#phone', [
+        {
+            rule: 'required',
+        },
+    ])
+
+const formEl = document.querySelector('#form')
+formEl.addEventListener('submit', async (evt) => {
+    evt.preventDefault()
+
+    let response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: new FormData(form),
+    })
+        .catch((err) => {
+            throw err;
+        })
+
+    if (response.ok) {
+        console.log('submitted')
+    }
+
+    form.reset()
+})

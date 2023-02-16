@@ -258,21 +258,21 @@
     <!-- Form -->
     <section class="section">
         <div class="container">
-            <form action="/" class="form" method="POST">
+            <form action="/" class="form" id="form" method="POST" autocomplete="off">
                 <h2 class="section__title lng-form-title">Бесплатная консультация</h2>
                 <div class="form__inner">
                     <div class="form__group">
-                        <input type="text" class="form__control lng-form-name" placeholder="ФИО">
+                        <input type="text" class="form__control lng-form-name" id="name" name="name" placeholder="ФИО" >
                     </div>
                     <div class="form__group">
-                        <input type="text" class="form__control lng-form-question"
+                        <input type="text" class="form__control lng-form-question" id="subject" name="subject"
                             placeholder="Какой помет вас заинтересовал?">
                     </div>
                     <div class="form__group">
-                        <input type="text" class="form__control lng-form-phone" placeholder="Номер телефона">
+                        <input type="tel" class="form__control lng-form-phone" id="phone" name="phone" placeholder="Номер телефона">
                     </div>
                     <div class="form__group">
-                        <input type="email" class="form__control lng-form-email" placeholder="Адрес электронной почты">
+                        <input type="email" class="form__control lng-form-email" id="email" name="email" placeholder="Адрес электронной почты">
                     </div>
                     <button class="btn btn--yellow lng-form-btn" type="submit">Отправить заявку</button>
                 </div>
@@ -306,6 +306,8 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.4.3/imask.min.js" integrity="sha512-yJ3vm1HmQtcgeMtbUYCp7PuTLyjU+ffCnVNTuE1Uccv1BmkoaJIXt1EjBVGnscjCILc62hTJJJ2rJJBTcw8RjQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/app.min.js"></script>
 
 </body>
