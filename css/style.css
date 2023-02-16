@@ -370,7 +370,11 @@ h6 {
 ================*/
 
 .just-validate-error-label {
-    transform: translateY(-95px);
+    position: absolute;
+    top: 63px;
+    left: 0;
+    z-index: 1;
+    font-size: 26px;
 }
 
 /* Form
