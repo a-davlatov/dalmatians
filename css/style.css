@@ -801,6 +801,12 @@ h6 {
     .form__control::placeholder {
         font-size: 25px;
     }
+
+    /* Just validate error */
+
+    .just-validate-error-label {
+        top: 50px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -1003,6 +1009,10 @@ h6 {
         font-size: 27px;
     }
 
+    .section__title::after {
+        height: 2px;
+    }
+
     /* Social */
 
     .social__icon--footer {
@@ -1017,6 +1027,13 @@ h6 {
 
     .social--footer {
         padding: 25px 0;
+    }
+
+    /* Just validate error */
+
+    .just-validate-error-label {
+        line-height: 1;
+        font-size: 20px;
     }
 }
 
@@ -1059,6 +1076,13 @@ h6 {
     /* Btn */
     .btn {
         padding: 10px 20px;
+        font-size: 16px;
+    }
+
+     /* Just validate error */
+
+     .just-validate-error-label {
+        top: 44px;
         font-size: 16px;
     }
 }
