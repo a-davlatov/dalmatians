@@ -61,6 +61,105 @@ burgerEl.addEventListener('click', (evt) => {
     navEl.classList.toggle('show')
 })
 
+// Validate form
+const element = document.getElementById('phone')
+const maskOptions = { mask: '+{7}(000)000-00-00' }
+const mask = IMask(element, maskOptions)
+
+const validator = new JustValidate('#form', {
+    validateBeforeSubmitting: true,
+}, [
+    {
+        key: 'Поле имя обязательное',
+        dict: {
+            en: 'Name is required'
+        },
+    },
+    {
+        key: 'Слишком короткое имя',
+        dict: {
+            en: 'Name is too short'
+        },
+    },
+    {
+        key: 'Слишком длинное имя',
+        dict: {
+            en: 'Name is too long'
+        },
+    },
+    {
+        key: 'Поле email обязательное',
+        dict: {
+            en: 'Email is required'
+        },
+    },
+    {
+        key: 'Email недействителен',
+        dict: {
+            en: 'Email is invalid'
+        },
+    },
+    {
+        key: 'Это поле обязательное',
+        dict: {
+            en: 'This field is required'
+        },
+    },
+    {
+        key: 'Поле должно содержать минимум 4 символов',
+        dict: {
+            en: 'The field must contain at least 4 characters'
+        },
+    },
+])
+
+validator.addField('#name', [
+    {
+        rule: 'required',
+        errorMessage: 'Поле имя обязательное',
+    },
+    {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'Слишком короткое имя',
+    },
+    {
+        rule: 'maxLength',
+        value: 15,
+        errorMessage: 'Слишком длинное имя',
+    },
+])
+    .addField('#email', [
+        {
+            rule: 'required',
+            errorMessage: 'Поле email обязательное',
+        },
+        {
+            rule: 'email',
+            errorMessage: 'Email недействителен',
+        },
+    ])
+    .addField('#subject', [
+        {
+            rule: 'required',
+            errorMessage: 'Это поле обязательное',
+        },
+        {
+            rule: 'minLength',
+            value: 4,
+            errorMessage: 'Поле должно содержать минимум 4 символов',
+        },
+    ])
+    .addField('#phone', [
+        {
+            rule: 'required',
+            errorMessage: 'Это поле обязательное',
+        },
+    ])
+
+validator.setCurrentLocale()
+
+
 // Change language
 const allLangs = ['en', 'ru']
 const selectEl = document.querySelector('select')
@@ -89,6 +188,7 @@ function changeLanguage() {
 
             const langArr = lang
             selectEl.value = hash
+            hash === 'en' ? validator.setCurrentLocale('en') : validator.setCurrentLocale()
             document.querySelector('title').innerText = langArr['unit'][hash]
             document.querySelector('html').lang = hash
 
@@ -121,50 +221,6 @@ if (loadLater && head) {
     head.insertAdjacentHTML('beforeend', loadLater.innerHTML)
 }
 
-// Validate forms
-const element = document.getElementById('phone')
-const maskOptions = { mask: '+{7}(000)000-00-00' }
-const mask = IMask(element, maskOptions)
-
-const validator = new JustValidate('#form', {
-    validateBeforeSubmitting: true,
-})
-
-validator.addField('#name', [
-    {
-        rule: 'required',
-    },
-    {
-        rule: 'minLength',
-        value: 3,
-    },
-    {
-        rule: 'maxLength',
-        value: 15,
-    },
-    ])
-    .addField('#email', [
-        {
-            rule: 'required',
-        },
-        {
-            rule: 'email',
-        },
-    ])
-    .addField('#subject', [
-        {
-            rule: 'required',
-        },
-        {
-            rule: 'minLength',
-            value: 6,
-        },
-    ])
-    .addField('#phone', [
-        {
-            rule: 'required',
-        },
-    ])
 
 // Form submit
 
@@ -176,11 +232,11 @@ formEl.addEventListener('submit', async (evt) => {
         method: 'POST',
         body: new FormData(form),
     })
-    .then((data) => {
-        console.log(data, 'Данные успешно отправлены!')
-        form.reset()
-    })
-    .catch((err) => {
-        throw err
-    })
+        .then((data) => {
+            console.log(data, 'Данные успешно отправлены!')
+            form.reset()
+        })
+        .catch((err) => {
+            throw err
+        })
 })
