@@ -5,6 +5,7 @@ const headerEl = document.querySelector('#header')
 const introEl = document.querySelector('#intro')
 const navEl = document.querySelector('#nav')
 const burgerEl = document.querySelector('#burger')
+const formEl = document.querySelector('#form')
 let introH = introEl.clientHeight
 let scrollPos = window.scrollY
 
@@ -111,12 +112,35 @@ const validator = new JustValidate('#form', {
             en: 'The field must contain at least 4 characters'
         },
     },
+    {
+        key: 'Это поле может содержать только буквы',
+        dict: {
+            en: 'This field can only contain letters'
+        },
+    },
+    {
+        key: 'Поле номер телефона обязательное',
+        dict: {
+            en: 'Phone number is required'
+        },
+    },
+    {
+        key: 'Введите пожалуйста корректный номер',
+        dict: {
+            en: 'Please enter a valid phone number'
+        },
+    },
 ])
 
 validator.addField('#name', [
     {
         rule: 'required',
         errorMessage: 'Поле имя обязательное',
+    },
+    {
+        rule: 'customRegexp',
+        value: '[a-zA-Zа-яА-ЯёЁ]+',
+        errorMessage: 'Это поле может содержать только буквы',
     },
     {
         rule: 'minLength',
@@ -145,6 +169,11 @@ validator.addField('#name', [
             errorMessage: 'Это поле обязательное',
         },
         {
+            rule: 'customRegexp',
+            value: '[a-zA-Zа-яА-ЯёЁ]+',
+            errorMessage: 'Это поле может содержать только буквы',
+        },
+        {
             rule: 'minLength',
             value: 4,
             errorMessage: 'Поле должно содержать минимум 4 символов',
@@ -153,12 +182,34 @@ validator.addField('#name', [
     .addField('#phone', [
         {
             rule: 'required',
-            errorMessage: 'Это поле обязательное',
+            errorMessage: 'Поле номер телефона обязательное',
+        },
+        {
+            rule: 'minLength',
+            value: 16,
+            errorMessage: 'Введите пожалуйста корректный номер',
         },
     ])
+    .onSuccess( async (evt) => {
+        evt.preventDefault()
+
+        const submitBtnEl = document.querySelector('#form-btn')
+        submitBtnEl.disabled = true
+        await fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: new FormData(form),
+        })
+            .then((data) => {
+                console.log('Данные успешно отправлены!')
+                form.reset()
+                submitBtnEl.disabled = false
+            })
+            .catch((err) => {
+                throw err
+            })
+    })
 
 validator.setCurrentLocale()
-
 
 // Change language
 const allLangs = ['en', 'ru']
@@ -220,23 +271,3 @@ const head = document.querySelector('head')
 if (loadLater && head) {
     head.insertAdjacentHTML('beforeend', loadLater.innerHTML)
 }
-
-
-// Form submit
-
-const formEl = document.querySelector('#form')
-formEl.addEventListener('submit', async (evt) => {
-    evt.preventDefault()
-
-    await fetch('https://jsonplaceholder.typicode.com/posts', {
-        method: 'POST',
-        body: new FormData(form),
-    })
-        .then((data) => {
-            console.log(data, 'Данные успешно отправлены!')
-            form.reset()
-        })
-        .catch((err) => {
-            throw err
-        })
-})
