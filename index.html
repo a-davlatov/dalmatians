@@ -54,7 +54,7 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Caveat&family=Jost:wght@300;400&family=Montserrat:wght@400;600&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" href="css/style.min.css">
+        <link rel="stylesheet" href="css/style.css">
     </noscript>
     <title>Питомник далматинов</title>
 </head>
@@ -258,7 +258,7 @@
     <!-- Form -->
     <section class="section">
         <div class="container">
-            <form action="/" class="form" id="form" method="POST" autocomplete="off">
+            <form action="/" class="form" id="form" method="POST" autocomplete="off" novalidate="novalidate">
                 <h2 class="section__title lng-form-title">Бесплатная консультация</h2>
                 <div class="form__inner">
                     <div class="form__group">
@@ -274,7 +274,7 @@
                     <div class="form__group">
                         <input type="email" class="form__control lng-form-email" id="email" name="email" placeholder="Адрес электронной почты">
                     </div>
-                    <button class="btn btn--yellow lng-form-btn" type="submit">Отправить заявку</button>
+                    <button id="form-btn" class="btn btn--yellow lng-form-btn" type="submit">Отправить заявку</button>
                 </div>
             </form>
         </div>

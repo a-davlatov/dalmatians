@@ -1,118 +1,150 @@
 {
-    "unit" : {
-        "ru" : "Питомник далматинов",
-        "en" : "Dalmatian Kennel Club"
+    "unit": {
+        "ru": "Питомник далматинов",
+        "en": "Dalmatian Kennel Club"
     },
-    "about-us" : {
-        "ru" : "О нас",
-        "en" : "About us"
+    "about-us": {
+        "ru": "О нас",
+        "en": "About us"
     },
-    "graduates" : {
-        "ru" : "Выпускники",
-        "en" : "Alumni"
+    "graduates": {
+        "ru": "Выпускники",
+        "en": "Alumni"
     },
-    "dogs" : {
-        "ru" : "Наши щенки",
-        "en" : "Our puppies"
+    "dogs": {
+        "ru": "Наши щенки",
+        "en": "Our puppies"
     },
-    "prompt-work" : {
-        "ru" : "работает с 2009г",
-        "en" : "in operation since 2009"
+    "prompt-work": {
+        "ru": "работает с 2009г",
+        "en": "in operation since 2009"
     },
-    "intro-title" : {
-        "ru" : "Питомник далматинов",
-        "en" : "Dalmatian Kennel Club"
+    "intro-title": {
+        "ru": "Питомник далматинов",
+        "en": "Dalmatian Kennel Club"
     },
-    "intro-text" : {
-        "ru" : "Все наши щенки имеют вет.паспорт,<br> прививки по возрасту, родословную",
-        "en" : "All our puppies have vaccination<br> according to age, pedigree"
+    "intro-text": {
+        "ru": "Все наши щенки имеют вет.паспорт,<br> прививки по возрасту, родословную",
+        "en": "All our puppies have vaccination<br> according to age, pedigree"
     },
-    "intro-btn" : {
-        "ru" : "Консультация",
-        "en" : "Consultation"
+    "intro-btn": {
+        "ru": "Консультация",
+        "en": "Consultation"
     },
-    "video-prompt" : {
-        "ru" : "видеопрезентация",
-        "en" : "video presentation"
+    "video-prompt": {
+        "ru": "видеопрезентация",
+        "en": "video presentation"
     },
-    "about" : {
-        "ru" : "О питомнике",
-        "en" : "About the nursery"
+    "about": {
+        "ru": "О питомнике",
+        "en": "About the nursery"
     },
-    "about-text" : {
-        "ru" : "Мы - профессиональный питомник. Делаем счастливыми людей уже целых 13 лет. Наши производители имеют богатую родослновную, имеют множество титулов. Также все родители проходят ОКД и тесты на психику. Все щенки соответствуют принятому международному стандарту породу по внешнему виду и по психике.",
-        "en" : "We are a professional cattery. We are making people happy for 13 years. Our sires have a rich pedigree and many titles. Also all parents pass the OKD and mental tests. All puppies meet accepted international breed standard in appearance and mentality."
+    "about-text": {
+        "ru": "Мы - профессиональный питомник. Делаем счастливыми людей уже целых 13 лет. Наши производители имеют богатую родослновную, имеют множество титулов. Также все родители проходят ОКД и тесты на психику. Все щенки соответствуют принятому международному стандарту по роду, по внешнему виду и по психике.",
+        "en": "We are a professional cattery. We are making people happy for 13 years. Our sires have a rich pedigree and many titles. Also all parents pass the OKD and mental tests. All puppies meet accepted international breed standard in appearance and mentality."
     },
-    "graduates-title" : {
-        "ru" : "Наши выпускники",
-        "en" : "Our graduates"
+    "graduates-title": {
+        "ru": "Наши выпускники",
+        "en": "Our graduates"
     },
-    "graduates-gerda" : {
-        "ru" : "Герда, 1 год и 2 месяца.",
-        "en" : "Gerda, 1 year and 2 months."
+    "graduates-gerda": {
+        "ru": "Герда, 1 год и 2 месяца.",
+        "en": "Gerda, 1 year and 2 months."
     },
-    "graduates-text" : {
-        "ru" : "Это наша первая собака. Взяли в питомнике Black&White и не пожалели! Удивительная девочка, понимает все с полуслова) Спасибо Вам!",
-        "en" : "This is our first dog. We got her from Black&White kennel and did not regret it! An amazing dog, understands everything perfectly) Thank you!"
+    "graduates-text": {
+        "ru": "Это наша первая собака. Взяли в питомнике Black&White и не пожалели! Удивительная девочка, понимает все с полуслова) Спасибо Вам!",
+        "en": "This is our first dog. We got her from Black&White kennel and did not regret it! An amazing dog, understands everything perfectly) Thank you!"
     },
-    "graduates-max" : {
-        "ru" : "Макс, 7 месяцев.",
-        "en" : "Max, 7 months."
+    "graduates-max": {
+        "ru": "Макс, 7 месяцев.",
+        "en": "Max, 7 months."
     },
-    "graduates-graph" : {
-        "ru" : "Граф, 9 месяцев.",
-        "en" : "Graph, 9 months."
+    "graduates-graph": {
+        "ru": "Граф, 9 месяцев.",
+        "en": "Graph, 9 months."
     },
-    "more" : {
-        "ru" : "Смотреть больше",
-        "en" : "See more"
+    "graduates-tigra": {
+        "ru": "Тигра, 2 года.",
+        "en": "Tigra, 2 years."
     },
-    "dogs-title" : {
-        "ru" : "Свободные щенки",
-        "en" : "Free puppies"
+    "graduates-rada": {
+        "ru": "Рада, 1 год и 5 месяца.",
+        "en": "Rada, 1 year and 5 months."
     },
-    "dogs-names" : {
-        "ru" : "МАЛЬЧИКИ от пары Zeus von Grau",
-        "en" : "Males from the pair Zeus von Grau"
+    "graduates-nagrada": {
+        "ru": "Награда, 11 месяцев.",
+        "en": "Nagrada, 11 months."
     },
-    "dogs-birth" : {
-        "ru" : "Дата рождения: 09/10/2022.",
-        "en" : "Date of birth: 09/10/2022."
+    "graduates-text1": {
+        "ru": "Не крупная, элегантная собака, хорошего формата, с красивой головой, отличными движениями и отличным характером. Воистину, она взяла от родителей только лучшее. Ровно то, что и задумывалось получить от этой комбинации :) С первого же дня было решено, что эта малышка остается с нами! Она родилась для нас!",
+        "en": "Not a big, elegant dog, good size, nice head, excellent movements and excellent character. Truly, she has taken only the best from her parents. Exactly what was meant to get from combination :) It was decided from day one that this little girl would stay with us! She was born for us!"
     },
-    "dogs-odd" : {
-        "ru" : "СВОБОДНО ДВА ЩЕНКА",
-        "en" : "TWO PUPPIES ARE FREE"
+    "graduates-text2": {
+        "ru": "По характеру Граф спокойная, уверенная в себе, очень ласковая и общительная собака. Очень умная и сообразительная, все схватывает буквально на лету. Учить с ней новые команды и трюки - одно удовольствие.",
+        "en": "By nature, Graf is a calm, self-confident, very affectionate and sociable dog. Very smart and quick-witted, grasps everything literally on the fly. Learn new things with her commands and tricks - a pleasure."
     },
-    "see-all" : {
-        "ru" : "Посмотреть всех",
-        "en" : "View all"
+    "graduates-text3": {
+        "ru": "Тигра родилась в нашем доме 22 сентября 2022 от нашей старшей далматинки Награды BIS Лунный Блюз (Рада) и молодого красавца с прекрасной родословной - Золотого Запаса из Ниеншанса (Тотем).",
+        "en": "Tigra was born in our home on 22 September 2022 from our eldest Dalmatian Reward BIS Lunny Blues (Rada) and a young handsome boy with a beautiful pedigree - Golden Reserve of Nienshans (Totem)."
     },
-    "dogs-even" : {
-        "ru" : "СВОБОДНО три ЩЕНКА",
-        "en" : "three PUPPIES ARE FREE"
+    "graduates-text4": {
+        "ru": "Очень спокойная, с крепкой психикой, всегда в хорошем настроении, великолепный компаньон, всегда готова принять участие в любое занятие которое предложит хозяин. Совершенно не конфликтная, она умеет дружить и договариваться практически со всеми, начиная от собак и кошек, заканчивая хомячками и попугайчиками.",
+        "en": "Very calm and mentally tough, always in good spirits, a great  companion, always ready to take part in any activity the owner suggests. Not at all conflictive, she knows how to be friendly and agree with almost everyone, from dogs and cats to hamsters and parrots."
     },
-    "form-title" : {
-        "ru" : "Бесплатная консультация",
-        "en" : "Free consultation"
+    "graduates-text5": {
+        "ru": "В быту это очень добрая, ласковая, послушная собака. На нее совершенно не приходится повышать голос и повторять команду, достаточно просьбы. Она действительно старается быть хорошей и угодить.",
+        "en": "At home it is a very kind, affectionate, obedient dog. You don't have to raise your voice or repeat a command at all, a request is enough. She really tries to be nice and please."
     },
-    "form-name" : {
-        "ru" : "ФИО",
-        "en" : "Full name"
+    "more": {
+        "ru": "Смотреть больше",
+        "en": "See more"
     },
-    "form-question" : {
-        "ru" : "Какой помет вас заинтересовал?",
-        "en" : "Which litter are you interested in?"
+    "dogs-title": {
+        "ru": "Свободные щенки",
+        "en": "Free puppies"
     },
-    "form-phone" : {
-        "ru" : "Номер телефона",
-        "en" : "Phone number"
+    "dogs-names": {
+        "ru": "МАЛЬЧИКИ от пары Zeus von Grau",
+        "en": "Males from the pair Zeus von Grau"
     },
-    "form-email" : {
-        "ru" : "Адрес электронной почты",
-        "en" : "E-mail address"
+    "dogs-birth": {
+        "ru": "Дата рождения: 09/10/2022.",
+        "en": "Date of birth: 09/10/2022."
     },
-    "form-btn" : {
-        "ru" : "Отправить заявку",
-        "en" : "Submit an application"
+    "dogs-odd": {
+        "ru": "СВОБОДНО ДВА ЩЕНКА",
+        "en": "TWO PUPPIES ARE FREE"
+    },
+    "see-all": {
+        "ru": "Показать еще",
+        "en": "Show more"
+    },
+    "dogs-even": {
+        "ru": "СВОБОДНО три ЩЕНКА",
+        "en": "three PUPPIES ARE FREE"
+    },
+    "form-title": {
+        "ru": "Бесплатная консультация",
+        "en": "Free consultation"
+    },
+    "form-name": {
+        "ru": "ФИО",
+        "en": "Full name"
+    },
+    "form-question": {
+        "ru": "Какой помет вас заинтересовал?",
+        "en": "Which litter are you interested in?"
+    },
+    "form-phone": {
+        "ru": "Номер телефона",
+        "en": "Phone number"
+    },
+    "form-email": {
+        "ru": "Адрес электронной почты",
+        "en": "E-mail address"
+    },
+    "form-btn": {
+        "ru": "Отправить заявку",
+        "en": "Submit an application"
     }
 }
