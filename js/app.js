@@ -211,6 +211,28 @@ validator.addField('#name', [
 
 validator.setCurrentLocale()
 
+// Show more
+function showMore(parentEl, itemsWrapperClass, itemClass, visibleItems) {
+    const showMoreBtnEl = parentEl.querySelector('.show-more')
+    const itemsLength = parentEl.querySelectorAll(itemClass).length
+    let items = visibleItems
+    
+    showMoreBtnEl.addEventListener('click', () => {
+        items += 2
+        const array = Array.from(parentEl.querySelector(itemsWrapperClass).children)
+        const visItems = array.slice(0, items)
+    
+        visItems.forEach(el => el.classList.add('is-visible'))
+    
+        if (visItems.length === itemsLength) {
+            showMoreBtnEl.style.display = 'none'
+        }
+    })
+}
+
+document.querySelectorAll('.dogs__item').forEach(el => showMore(el, '.dogs__images', '.dogs__photo', 1))
+showMore(document.querySelector('#graduates'), '.graduates__wrapper', '.graduates__item', 3)
+
 // Change language
 const allLangs = ['en', 'ru']
 const selectEl = document.querySelector('select')
