@@ -176,6 +176,11 @@ h6 {
     transition: background-color .2s linear;
 }
 
+.btn--graduates {
+    margin-top: 150px;
+    background: #fff;
+}
+
 .btn:hover {
     background: #FFE660;
     cursor: pointer;
@@ -265,6 +270,7 @@ h6 {
 ================*/
 .graduates {
     padding-bottom: 150px;
+    position: relative;
     background-image: url('../images/graduates/bg.webp');
     background-repeat: no-repeat;
     background-position: top right;
@@ -283,12 +289,17 @@ h6 {
     align-items: center;
 }
 
-.graduates__photo {
-    width: 50%;
+.graduates__item:nth-child(n + 3) {
+    display: none;
 }
 
-.graduates__item:last-of-type {
-    padding-bottom: 150px;
+.graduates__item.is-visible {
+    display: flex;
+}
+
+.graduates__photo {
+    width: 50%;
+    border-radius: 28px;
 }
 
 .graduates__content {
@@ -339,14 +350,10 @@ h6 {
     margin-top: 150px;
 }
 
-.dogs__link {
+.dogs__parents {
     margin-bottom: 10px;
     font-size: 40px;
     color: #000;
-}
-
-.dogs__link:hover {
-    text-decoration: none;
 }
 
 .dogs__info {
@@ -364,6 +371,18 @@ h6 {
 
 .dogs__photo {
     margin: 30px 0;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 707px;
+    height: auto;
+}
+
+.dogs__images .dogs__photo:nth-child(n + 2) {
+    display: none;
+}
+
+.dogs__images .dogs__photo.is-visible {
+    display: block;
 }
 
 /* Just-validate
@@ -741,10 +760,6 @@ h6 {
         padding-top: 50px;
     }
 
-    .graduates__item:last-of-type {
-        padding-bottom: 65px;
-    }
-
     .graduates__content {
         margin-left: 30px;
     }
@@ -775,7 +790,7 @@ h6 {
         margin-top: 80px;
     }
 
-    .dogs__link {
+    .dogs__parents {
         margin-bottom: 0;
         font-size: 30px;
     }
@@ -806,6 +821,10 @@ h6 {
 
     .just-validate-error-label {
         top: 50px;
+    }
+
+    .btn--graduates {
+        margin-top: 65px;
     }
 }
 
@@ -955,7 +974,7 @@ h6 {
         margin-top: 45px;
     }
 
-    .dogs__link,
+    .dogs__parents,
     .dogs__info {
         font-size: 25px;
     }
@@ -1046,7 +1065,7 @@ h6 {
     }
 
     /* Dogs */
-    .dogs__link,
+    .dogs__parents,
     .dogs__info {
         font-size: 20px;
         text-align: center;
@@ -1067,16 +1086,14 @@ h6 {
         font-size: 18px;
     }
 
-    /* Graduates */
-
-    .graduates__item:last-of-type {
-        padding-bottom: 25px;
-    }
-
     /* Btn */
     .btn {
         padding: 10px 20px;
         font-size: 16px;
+    }
+
+    .btn--graduates {
+        margin-top: 25px;
     }
 
      /* Just validate error */
