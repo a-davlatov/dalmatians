@@ -104,10 +104,18 @@
         "en": "Free puppies"
     },
     "dogs-names": {
+        "ru": "МАЛЬЧИКИ от нашей старшей далматинки Награды",
+        "en": "from our eldest dalmatian Nagrada"
+    },
+    "dogs-names1": {
         "ru": "МАЛЬЧИКИ от пары Zeus von Grau",
         "en": "Males from the pair Zeus von Grau"
     },
     "dogs-birth": {
+        "ru": "Дата рождения: 21/12/2022.",
+        "en": "Date of birth: 21/12/2022."
+    },
+    "dogs-birth1": {
         "ru": "Дата рождения: 09/10/2022.",
         "en": "Date of birth: 09/10/2022."
     },

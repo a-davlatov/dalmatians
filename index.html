@@ -54,7 +54,7 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Caveat&family=Jost:wght@300;400&family=Montserrat:wght@400;600&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.min.css">
     </noscript>
     <title>Питомник далматинов</title>
 </head>
@@ -86,6 +86,12 @@
 				C480.224,136.96,497.728,118.496,512,97.248z" />
             </g>
         </symbol>
+        <symbol id="vk" viewBox="0 0 448 512">
+            <g>
+                <path
+                    d="M31.4907 63.4907C0 94.9813 0 145.671 0 247.04V264.96C0 366.329 0 417.019 31.4907 448.509C62.9813 480 113.671 480 215.04 480H232.96C334.329 480 385.019 480 416.509 448.509C448 417.019 448 366.329 448 264.96V247.04C448 145.671 448 94.9813 416.509 63.4907C385.019 32 334.329 32 232.96 32H215.04C113.671 32 62.9813 32 31.4907 63.4907ZM75.6 168.267H126.747C128.427 253.76 166.133 289.973 196 297.44V168.267H244.16V242C273.653 238.827 304.64 205.227 315.093 168.267H363.253C359.313 187.435 351.46 205.583 340.186 221.579C328.913 237.574 314.461 251.071 297.733 261.227C316.41 270.499 332.907 283.63 346.132 299.751C359.357 315.873 369.01 334.618 374.453 354.747H321.44C316.555 337.262 306.614 321.61 292.865 309.754C279.117 297.899 262.173 290.368 244.16 288.107V354.747H238.373C136.267 354.747 78.0267 284.747 75.6 168.267Z" />
+            </g>
+        </symbol>
         <symbol id="linkedin" viewBox="0 0 552.77 552.77">
             <g>
                 <path d="M17.95,528.854h71.861c9.914,0,17.95-8.037,17.95-17.951V196.8c0-9.915-8.036-17.95-17.95-17.95H17.95
@@ -99,12 +105,6 @@
 					c14.572,0,27.037,3.58,37.393,10.741c10.355,7.16,17.834,17.19,22.436,30.104c4.604,12.912,6.904,41.354,6.904,85.33v132.627
 					c0,9.914,8.035,17.951,17.949,17.951h71.861c9.914,0,17.949-8.037,17.949-17.951V333.02c0-31.445-1.982-55.607-5.941-72.48
 					S535.836,228.581,525.732,215.282z" />
-            </g>
-        </symbol>
-        <symbol id="telegram" viewBox="0 -31 512 512">
-            <g>
-                <path
-                    d="m123.195312 260.738281 63.679688 159.1875 82.902344-82.902343 142.140625 112.976562 100.082031-450-512 213.265625zm242.5-131.628906-156.714843 142.941406-19.519531 73.566407-36.058594-90.164063zm0 0" />
             </g>
         </symbol>
     </svg>
@@ -144,7 +144,7 @@
                         Все наши щенки имеют вет.паспорт,<br>
                         прививки по возрасту, родословную
                     </div>
-                    <a href="#" class="btn btn--yellow lng-intro-btn">Консультация</a>
+                    <a href="#" class="btn btn--yellow lng-intro-btn" data-scroll="form">Консультация</a>
                 </div>
                 <div class="intro__pictures">
                     <img class="intro__photo section__photo" width="689" height="686" src="images/intro/dogs.webp"
@@ -170,7 +170,7 @@
                         Мы - профессиональный питомник. Делаем счастливыми людей уже целых 13 лет.
                         Наши производители имеют богатую родослновную, имеют множество титулов. Также все родители
                         проходят ОКД и тесты на психику.
-                        Все щенки соответствуют принятому международному стандарту породу по внешнему виду и по психике.
+                        Все щенки соответствуют принятому международному стандарту по роду, по внешнему виду и по психике.
                     </div>
                 </div>
                 <div class="about__picture">
@@ -185,43 +185,86 @@
         <div class="container">
             <div class="graduates__inner">
                 <h2 class="section__title lng-graduates-title">Наши выпускники</h2>
-                <div class="graduates__item">
-                    <img src="images/graduates/graduates1.webp" width="412" height="354" alt="Герда"
-                        class="graduates__photo section__photo">
-                    <div class="graduates__content">
-                        <div class="graduates__title lng-graduates-gerda">Герда, 1 год и 2 месяца.</div>
-                        <div class="graduates__text lng-graduates-text">
-                            Это наша первая собака. Взяли в питомнике Black&White и не пожалели! Удивительная девочка,
-                            понимает все с полуслова)
-                            Спасибо Вам!
+                <div class="graduates__wrapper">
+                    <div class="graduates__item">
+                        <img src="images/graduates/graduates1.webp" width="412" height="354" alt="Герда"
+                            class="graduates__photo section__photo">
+                        <div class="graduates__content">
+                            <div class="graduates__title lng-graduates-gerda">Герда, 1 год и 2 месяца.</div>
+                            <div class="graduates__text lng-graduates-text">
+                                Это наша первая собака. Взяли в питомнике Black&White и не пожалели! Удивительная
+                                девочка,
+                                понимает все с полуслова)
+                                Спасибо Вам!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="graduates__item">
+                        <img src="images/graduates/graduates2.webp" width="412" height="354" alt="Макс"
+                            class="graduates__photo section__photo">
+                        <div class="graduates__content">
+                            <div class="graduates__title lng-graduates-max">Макс, 7 месяцев.</div>
+                            <div class="graduates__text lng-graduates-text1">
+                                Не крупная, элегантная собака, хорошего формата, с красивой головой, отличными
+                                движениями
+                                и отличным характером.
+                                Воистину, она взяла от родителей только лучшее. Ровно то, что и задумывалось получить от
+                                этой комбинации :)
+                                С первого же дня было решено, что эта малышка остается с нами! Она родилась для нас!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="graduates__item">
+                        <img src="images/graduates/graduates3.webp" width="412" height="354" alt="Граф"
+                            class="graduates__photo section__photo">
+                        <div class="graduates__content">
+                            <div class="graduates__title lng-graduates-graph">Граф, 9 месяцев.</div>
+                            <div class="graduates__text lng-graduates-text2">
+                                По характеру Граф спокойная, уверенная в себе, очень ласковая и общительная собака.
+                                Очень умная и сообразительная, все схватывает буквально на лету. Учить с ней новые
+                                команды и трюки - одно удовольствие.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="graduates__item">
+                        <img src="images/graduates/graduates4.webp" width="604" height="564" alt="Тигра"
+                            class="graduates__photo section__photo">
+                        <div class="graduates__content">
+                            <div class="graduates__title lng-graduates-tigra">Тигра, 2 года.</div>
+                            <div class="graduates__text lng-graduates-text3">
+                                Тигра родилась в нашем доме 22 сентября 2022 от нашей старшей далматинки Награды BIS
+                                Лунный Блюз (Рада) и молодого красавца с прекрасной родословной - Золотого Запаса из
+                                Ниеншанса (Тотем).
+                            </div>
+                        </div>
+                    </div>
+                    <div class="graduates__item">
+                        <img src="images/graduates/graduates5.webp" width="575" height="600" alt="Рада"
+                            class="graduates__photo section__photo">
+                        <div class="graduates__content">
+                            <div class="graduates__title lng-graduates-rada">Рада, 1 год и 5 месяца.</div>
+                            <div class="graduates__text lng-graduates-text4">
+                                Очень спокойная, с крепкой психикой, всегда в хорошем настроении, великолепный
+                                компаньон, всегда готова принять участие в любое занятие которое предложит хозяин.
+                                Совершенно не конфликтная, она умеет дружить и договариваться практически со всеми,
+                                начиная от собак и кошек, заканчивая хомячками и попугайчиками.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="graduates__item">
+                        <img src="images/graduates/graduates6.webp" width="576" height="615" alt="Граф"
+                            class="graduates__photo section__photo">
+                        <div class="graduates__content">
+                            <div class="graduates__title lng-graduates-nagrada">Награда, 11 месяцев.</div>
+                            <div class="graduates__text lng-graduates-text5">
+                                В быту это очень добрая, ласковая, послушная собака. На нее совершенно не приходится
+                                повышать голос и повторять команду, достаточно просьбы. Она действительно старается быть
+                                хорошей и угодить.
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="graduates__item">
-                    <img src="images/graduates/graduates2.webp" width="412" height="354" alt="Макс"
-                        class="graduates__photo section__photo">
-                    <div class="graduates__content">
-                        <div class="graduates__title lng-graduates-max">Макс, 7 месяцев.</div>
-                        <div class="graduates__text lng-graduates-text">
-                            Это наша первая собака. Взяли в питомнике Black&White и не пожалели! Удивительная девочка,
-                            понимает все с полуслова)
-                            Спасибо Вам!
-                        </div>
-                    </div>
-                </div>
-                <div class="graduates__item">
-                    <img src="images/graduates/graduates3.webp" width="412" height="354" alt="Граф"
-                        class="graduates__photo section__photo">
-                    <div class="graduates__content">
-                        <div class="graduates__title lng-graduates-graph">Граф, 9 месяцев.</div>
-                        <div class="graduates__text lng-graduates-text">
-                            Это наша первая собака. Взяли в питомнике Black&White и не пожалели! Удивительная девочка,
-                            понимает все с полуслова)
-                            Спасибо Вам!
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="btn lng-more">Смотреть больше</a>
+                <button class="btn btn--graduates lng-more show-more">Смотреть больше</button>
             </div>
         </div>
     </section><!-- /.graduates -->
@@ -233,23 +276,35 @@
                 <h2 class="section__title lng-dogs-title">Свободные щенки</h2>
                 <div class="dogs__item">
                     <div class="dogs__content">
-                        <a href="#" class="dogs__link lng-dogs-names">МАЛЬЧИКИ от пары Zeus von Grau</a>
-                        <div class="dogs__birth lng-dogs-birth">Дата рождения: 09/10/2022.</div>
+                        <div class="dogs__parents lng-dogs-names">МАЛЬЧИКИ от пары Zeus von Grau</div>
+                        <div class="dogs__birth lng-dogs-birth">Дата рождения: 21/12/2022.</div>
                         <div class="dogs__info dogs__info--odd lng-dogs-odd">СВОБОДНО ДВА ЩЕНКА</div>
                     </div>
-                    <img src="images/dogs/dogs1.webp" width="707" height="607" alt="Щенки"
-                        class="dogs__photo section__photo">
-                    <a href="#" class="btn btn--yellow lng-see-all">Посмотреть всех</a>
+                    <div class="dogs__images">
+                        <img src="images/dogs/dogs1.webp" width="707" height="607" alt="Щенки"
+                            class="dogs__photo section__photo">
+                        <img src="images/dogs/dogs3.webp" width="1079" height="1079" alt="Щенок"
+                            class="dogs__photo section__photo">
+                        <img src="images/dogs/dogs4.webp" width="640" height="452" alt="Щенок"
+                            class="dogs__photo section__photo">
+                    </div>
+                    <button class="btn btn--yellow lng-see-all show-more">Показать еще</button>
                 </div>
                 <div class="dogs__item">
                     <div class="dogs__content">
-                        <a href="#" class="dogs__link lng-dogs-names">МАЛЬЧИКИ от пары Zeus von Grau</a>
-                        <div class="dogs__birth lng-dogs-birth">Дата рождения: 20/09/2022.</div>
+                        <div class="dogs__parents lng-dogs-names">МАЛЬЧИКИ от нашей старшей далматинки Награды</div>
+                        <div class="dogs__birth lng-dogs-birth1">Дата рождения: 20/09/2022.</div>
                         <div class="dogs__info dogs__info--even lng-dogs-even">СВОБОДНО три ЩЕНКА</div>
                     </div>
-                    <img src="images/dogs/dogs2.webp" width="707" height="607" alt="Щенки"
-                        class="dogs__photo section__photo">
-                    <a href="#" class="btn btn--yellow lng-see-all">Посмотреть всех</a>
+                    <div class="dogs__images">
+                        <img src="images/dogs/dogs2.webp" width="707" height="607" alt="Щенок"
+                            class="dogs__photo section__photo">
+                        <img src="images/dogs/dogs5.webp" width="940" height="627" alt="Щенок"
+                            class="dogs__photo section__photo">
+                        <img src="images/dogs/dogs6.webp" width="1009" height="1200" alt="Щенок"
+                            class="dogs__photo section__photo">
+                    </div>
+                    <button class="btn btn--yellow lng-see-all show-more">Показать еще</button>
                 </div>
             </div>
         </div>
@@ -269,10 +324,12 @@
                             placeholder="Какой помет вас заинтересовал?">
                     </div>
                     <div class="form__group">
-                        <input type="tel" class="form__control lng-form-phone" id="phone" name="phone" placeholder="Номер телефона" pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})">
+                        <input type="tel" class="form__control lng-form-phone" id="phone" name="phone"
+                            placeholder="Номер телефона">
                     </div>
                     <div class="form__group">
-                        <input type="email" class="form__control lng-form-email" id="email" name="email" placeholder="Адрес электронной почты">
+                        <input type="email" class="form__control lng-form-email" id="email" name="email"
+                            placeholder="Адрес электронной почты">
                     </div>
                     <button id="form-btn" class="btn btn--yellow lng-form-btn" type="submit">Отправить заявку</button>
                 </div>
@@ -283,32 +340,38 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="social social--footer">
-            <a class="social__item social__item--footer social__item--facebook" href="#" target="_blank">
+            <a class="social__item social__item--footer social__item--facebook"
+                href="https://www.facebook.com/Dalmatians.Russia" target="_blank">
                 <svg class="social__icon social__icon--footer">
                     <use xlink:href="#facebook"></use>
                 </svg>
             </a>
-            <a class="social__item social__item--footer social__item--twitter" href="#" target="_blank">
+            <a class="social__item social__item--footer social__item--twitter" href="https://twitter.com/CamilaTheDal"
+                target="_blank">
                 <svg class="social__icon social__icon--footer">
                     <use xlink:href="#twitter"></use>
                 </svg>
             </a>
-            <a class="social__item social__item--footer social__item--linkedin" href="#" target="_blank">
+            <a class="social__item social__item--footer social__item--linkedin" href="https://vk.com/dalmatians"
+                target="_blank">
                 <svg class="social__icon social__icon--footer">
-                    <use xlink:href="#linkedin"></use>
+                    <use xlink:href="#vk"></use>
                 </svg>
             </a>
-            <a class="social__item social__item--footer social__item--telegram" href="#" target="_blank">
+            <a class="social__item social__item--footer social__item--telegram"
+                href="https://www.linkedin.com/company/opal-onyx-dalmatians/about/" target="_blank">
                 <svg class="social__icon social__icon--footer">
-                    <use xlink:href="#telegram"></use>
+                    <use xlink:href="#linkedin"></use>
                 </svg>
             </a>
         </div>
     </footer>
 
     <script src="js/just-validate.production.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.4.3/imask.min.js" integrity="sha512-yJ3vm1HmQtcgeMtbUYCp7PuTLyjU+ffCnVNTuE1Uccv1BmkoaJIXt1EjBVGnscjCILc62hTJJJ2rJJBTcw8RjQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.4.3/imask.min.js"
+        integrity="sha512-yJ3vm1HmQtcgeMtbUYCp7PuTLyjU+ffCnVNTuE1Uccv1BmkoaJIXt1EjBVGnscjCILc62hTJJJ2rJJBTcw8RjQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/app.min.js"></script>
 
 </body>
 
