@@ -230,7 +230,7 @@ function showMore(parentEl, itemsWrapperClass, itemClass, visibleItems) {
     })
 }
 
-document.querySelectorAll('.dogs__item').forEach(el => showMore(el, '.dogs__images', '.dogs__photo', 1))
+document.querySelectorAll('.dogs__item').forEach(el => showMore(el, '.dogs__images', '.fslightbox-link', 1))
 showMore(document.querySelector('#graduates'), '.graduates__wrapper', '.graduates__item', 3)
 
 // Change language

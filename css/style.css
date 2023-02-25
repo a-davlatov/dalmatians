@@ -298,8 +298,12 @@ h6 {
 }
 
 .graduates__photo {
-    width: 50%;
+    width: 100%;
     border-radius: 28px;
+}
+
+.graduates__photo-link {
+    width: 50%;
 }
 
 .graduates__content {
@@ -377,11 +381,11 @@ h6 {
     height: auto;
 }
 
-.dogs__images .dogs__photo:nth-child(n + 2) {
+.dogs__images .fslightbox-link:nth-child(n + 2) {
     display: none;
 }
 
-.dogs__images .dogs__photo.is-visible {
+.dogs__images .fslightbox-link.is-visible {
     display: block;
 }
 
@@ -773,7 +777,7 @@ h6 {
         font-size: 25px;
     }
 
-    .graduates__photo {
+    .graduates__photo-link {
         width: 40%;
     }
 
@@ -945,7 +949,7 @@ h6 {
         text-align: center;
     }
 
-    .graduates__photo {
+    .graduates__photo-link {
         margin-bottom: 20px;
         width: 100%;
     }
